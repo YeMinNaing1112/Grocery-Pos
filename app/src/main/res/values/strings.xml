@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GroceryPOS</string>
+    <string name="lbl_cashier">Cashier</string>
+    <string name="lbl_the_grocery_pos">The Grocery POS</string>
+    <string name="lbl_admin">Admin</string>
+    <string name="lbl_about">About</string>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+</resources>
