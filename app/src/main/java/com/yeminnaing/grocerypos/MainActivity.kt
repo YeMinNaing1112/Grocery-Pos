@@ -1,54 +1,74 @@
 package com.yeminnaing.grocerypos
 
 import android.os.Bundle
-import android.view.MenuItem
 import android.widget.Toast
-import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.GravityCompat
-import com.google.android.material.navigation.NavigationView
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.yeminnaing.grocerypos.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+
+    private lateinit var navController: NavController
+    private lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var listener: NavController.OnDestinationChangedListener
+    private lateinit var drawer: DrawerLayout
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
         setSupportActionBar(binding.toolBar)
-        setUpDrawerLayout()
+        setUpNavigationDrawerWithNavController()
     }
 
-    private fun setUpDrawerLayout() {
-        val toggle = ActionBarDrawerToggle(
-            this,
-            binding.drawerLayout,
-            binding.toolBar,
-            R.string.drawer_open, R.string.drawer_close
-        )
-        binding.drawerLayout.addDrawerListener(toggle)
-        toggle.syncState()
+    private fun setUpNavigationDrawerWithNavController() {
 
-        binding.navView.setNavigationItemSelectedListener(this)
+        navController = findNavController(R.id.fragment)
+        binding.navView.setupWithNavController(navController)
+        drawer = findViewById(R.id.drawerLayout)
+
+        appBarConfiguration = AppBarConfiguration(navController.graph, drawer)
+        setupActionBarWithNavController(navController, appBarConfiguration)
+
+        listener =
+            NavController.OnDestinationChangedListener { controller, destination, arguments ->
+                when (destination.id) {
+                    R.id.nav_admin -> {
+                        supportActionBar?.title = "Admin"
+                    }
+
+                    R.id.nav_cashier -> {
+                        supportActionBar?.title = "Cashier"
+                    }
+
+                    else -> {
+                        Toast.makeText(this, "About", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+
     }
 
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.nav_admin -> {
-                Toast.makeText(this, "Admin", Toast.LENGTH_SHORT).show()
-                binding.drawerLayout.closeDrawer(GravityCompat.START)
-            }
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.fragment)
+        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
 
-            R.id.nav_cashier -> {
-                Toast.makeText(this, "Cashier", Toast.LENGTH_SHORT).show()
-            }
+    override fun onPause() {
+        super.onPause()
+        navController.removeOnDestinationChangedListener(listener)
+    }
 
-            R.id.nav_about -> {
-                Toast.makeText(this, "about", Toast.LENGTH_SHORT).show()
-            }
-        }
-
-        return true
+    override fun onResume() {
+        super.onResume()
+        navController.addOnDestinationChangedListener(listener)
     }
 }

@@ -2,9 +2,9 @@
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/drawerLayout"
     tools:context=".MainActivity">
 
     <RelativeLayout
@@ -24,8 +24,16 @@
                 app:titleTextAppearance="@style/MyTitleTextAppearance" />
         </com.google.android.material.appbar.AppBarLayout>
 
-
+        <fragment
+            android:id="@+id/fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/appBar"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/my_nav" />
     </RelativeLayout>
+
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
@@ -34,4 +42,6 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/header_view"
         app:menu="@menu/nav_drawer" />
+
+
 </androidx.drawerlayout.widget.DrawerLayout>
