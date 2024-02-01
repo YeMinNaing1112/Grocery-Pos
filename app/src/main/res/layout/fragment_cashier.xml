@@ -1,15 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00BCD4"
-    tools:context=".CashierFragment">
+    android:background="@color/color_primary"
+    tools:context=".ui.CashierFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="CashierFragment" />
+        android:background="@drawable/gradiant_for_cashier_fragment"
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                app:boxBackgroundColor="@color/color_primary"
+                app:boxCornerRadiusBottomEnd="@dimen/margin_medium_2"
+                app:boxCornerRadiusBottomStart="@dimen/margin_medium_2"
+                app:boxCornerRadiusTopEnd="@dimen/margin_medium_2"
+                app:boxCornerRadiusTopStart="@dimen/margin_medium_2"
+                app:boxStrokeColor="@color/text_color_dark"
+                app:endIconMode="clear_text"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/text_color_dark"
+                app:startIconDrawable="@drawable/baseline_search_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/et_search_height"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginEnd="@dimen/margin_medium_2"
+                    android:textCursorDrawable="@drawable/cursor_color" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvShowStockAlert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textInputLayout"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:clipToPadding="false"
+                android:paddingEnd="@dimen/margin_medium_2" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rvShowStockAlert"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:clipToPadding="false"
+                android:paddingEnd="@dimen/margin_medium_2" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvItemsForSale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rvCategory"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/specific_padding_hight_for_rvItems" />
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlProceedToCheckout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/proceed_to_checkout_height"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_xlarge"
+        android:background="@drawable/proceed_to_order_bg">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:text="@string/lbl_proceed_to_order"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_regular" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivForwardArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:src="@drawable/baseline_arrow_forward_24" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTotalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_toStartOf="@id/ivForwardArrow"
+            android:text="36 $"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTotalItems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:layout_toStartOf="@id/tvTotalPrice"
+            android:text="3 items"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_marginStart="@dimen/margin_medium_2"
+    android:background="@drawable/instock_bg"
+    android:layout_height="100dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginTop="@dimen/margin_medium"
+        android:id="@+id/tvShowStock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/tv_show_stock_bg"
+        android:padding="@dimen/margin_small"
+        android:text="Running Out of Stock"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvStockType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvShowStock"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="Grain"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvStockName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvStockType"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="Rice"
+        android:textSize="@dimen/text_regular"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvStockAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvStockType"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="20"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/margin_medium_3"
+        android:textSize="@dimen/text_regular"/>
+
+
+</RelativeLayout>

@@ -4,10 +4,15 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="color_primary">#F6F6F8</color>
+    <color name="color_primary_light">#C1C0C5</color>
     <color name="color_accent">#7468D4</color>
     <color name="color_accent_light">#5E4ECD</color>
 
     <color name="text_color_light">#C1C0C5</color>
     <color name="text_color">#A5A3AD</color>
     <color name="text_color_dark">#1F1C2D</color>
+
+
+    <color name="light_red">#FF7F7F</color>
+    <color name="red">#FF0500</color>
 </resources>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginStart="@dimen/margin_medium_2"
+    android:layout_marginEnd="@dimen/margin_medium_2"
+    android:id="@+id/rlItemForSale"
+    android:background="@drawable/item_for_sale_bg"
+    android:layout_marginTop="@dimen/margin_medium_2"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin_medium_2">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivItemImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_rice"
+        app:shapeAppearanceOverlay="@style/RoundedSquare" />
+
+    <LinearLayout
+        android:id="@+id/llNameAndPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_toEndOf="@id/ivItemImage"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemNameLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ShweBo Rice"
+            android:textSize="@dimen/text_regular_2x" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemPriceLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="10000 KS"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_toEndOf="@id/ivItemImage"
+        android:text="ShweBo Rice"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <LinearLayout
+        android:id="@+id/llShowAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPlus"
+            android:layout_width="@dimen/width_and_height_for_plus_and_minus"
+            android:layout_height="@dimen/width_and_height_for_plus_and_minus"
+            android:src="@drawable/ic_plus" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAmountLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:text="1"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivMinus"
+            android:layout_width="@dimen/width_and_height_for_plus_and_minus"
+            android:layout_height="@dimen/width_and_height_for_plus_and_minus"
+            android:src="@drawable/ic_minus" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvItemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="10000 KS"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold" />
+
+</RelativeLayout>

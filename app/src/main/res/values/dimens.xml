@@ -35,5 +35,9 @@
 
     <!-- spec diems-->
     <dimen name="header_height">180dp</dimen>
+    <dimen name="et_search_height">60dp</dimen>
+    <dimen name="proceed_to_checkout_height">40dp</dimen>
+    <dimen name="specific_padding_hight_for_rvItems">75dp</dimen>
+    <dimen name="width_and_height_for_plus_and_minus">25dp</dimen>
 
 </resources>

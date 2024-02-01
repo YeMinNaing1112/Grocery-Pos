@@ -13,4 +13,10 @@
         <item name="android:textStyle">bold</item>
         <!-- Add more attributes as needed -->
     </style>
+
+//For ImageViewRoundedSquare
+    <style name="RoundedSquare">
+        <item name="cornerSize">@dimen/margin_medium_2</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
 </resources>

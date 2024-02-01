@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:paddingEnd="@dimen/margin_medium_2"
+    android:paddingStart="@dimen/margin_medium_2"
+    android:background="@drawable/category_bg"
+    android:layout_marginStart="@dimen/margin_medium_2"
+    android:paddingTop="@dimen/margin_medium"
+    android:id="@+id/rlCategory"
+    android:paddingBottom="@dimen/margin_medium"
+    android:layout_height="wrap_content">
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/tvCategoryName"
+    android:textSize="@dimen/text_regular_2x"
+    android:textStyle="bold"
+    android:text="Grain"
+    android:textColor="@color/color_accent_light"
+    />
+</RelativeLayout>
