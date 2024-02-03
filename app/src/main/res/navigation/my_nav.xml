@@ -14,5 +14,18 @@
         android:id="@+id/nav_cashier"
         android:name="com.yeminnaing.grocerypos.ui.CashierFragment"
         android:label="fragment_cashier"
-        tools:layout="@layout/fragment_cashier" />
+        tools:layout="@layout/fragment_cashier" >
+        <action
+            android:id="@+id/action_nav_cashier_to_checkOutItemsFragment"
+            app:destination="@id/checkOutItemsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkOutItemsFragment"
+        android:name="com.yeminnaing.grocerypos.ui.CheckOutItemsFragment"
+        android:label="fragment_check_out_items"
+        tools:layout="@layout/fragment_check_out_items" >
+        <action
+            android:id="@+id/action_checkOutItemsFragment_to_nav_cashier"
+            app:destination="@id/nav_cashier" />
+    </fragment>
 </navigation>

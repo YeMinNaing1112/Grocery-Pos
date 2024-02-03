@@ -9,7 +9,6 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:background="@drawable/gradiant_for_cashier_fragment"
         android:layout_height="match_parent">
 
         <RelativeLayout
@@ -70,10 +69,17 @@
                 android:clipToPadding="false"
                 android:paddingBottom="@dimen/specific_padding_hight_for_rvItems" />
 
+
         </RelativeLayout>
 
 
     </androidx.core.widget.NestedScrollView>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradiant_for_cashier_fragment" />
 
     <RelativeLayout
         android:id="@+id/rlProceedToCheckout"
