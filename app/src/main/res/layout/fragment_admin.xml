@@ -1,15 +1,248 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#E91E63"
     android:layout_height="match_parent"
+    android:background="@color/color_primary"
     tools:context=".ui.AdminFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="AdminFragment" />
+   
 
-</FrameLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="@dimen/margin_medium_2"
+               android:orientation="horizontal"
+               android:id="@+id/llDailyAndWeeklyInCome"
+               >
+               
+               
+               <RelativeLayout
+                   android:id="@+id/btnDailyIncome"
+                   android:elevation="@dimen/margin_medium"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/admin_items_bg"
+                   android:layout_weight=".40"
+                   >
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:layout_width="60dp"
+                       android:id="@+id/ivDailyIncome"
+                       android:layout_marginStart="@dimen/margin_medium_2"
+                       android:layout_marginEnd="@dimen/margin_medium_2"
+                       android:layout_height="60dp"
+                       android:layout_marginBottom="@dimen/margin_medium_3"
+                       android:layout_centerInParent="true"
+                       android:src="@drawable/ic_income"/>
+
+                   <androidx.appcompat.widget.AppCompatTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_below="@id/ivDailyIncome"
+                       android:textColor="@color/color_accent_light"
+                       android:textStyle="bold"
+                       android:text="Daily Income"
+                       android:layout_centerHorizontal="true"
+                       android:layout_marginTop="@dimen/margin_medium_2"
+                       android:layout_marginBottom="@dimen/margin_medium_2"/>
+
+               </RelativeLayout>
+
+               <RelativeLayout
+                   android:layout_marginStart="@dimen/margin_medium"
+                   android:id="@+id/btnWeeklyIncome"
+                   android:layout_width="0dp"
+                   android:elevation="@dimen/margin_medium"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/admin_items_bg"
+                   android:layout_weight=".40"
+                   >
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:layout_width="60dp"
+                       android:id="@+id/ivWeeklyIncome"
+                       android:layout_marginStart="@dimen/margin_medium_2"
+                       android:layout_marginEnd="@dimen/margin_medium_2"
+                       android:layout_height="60dp"
+                       android:layout_marginBottom="@dimen/margin_medium_3"
+                       android:layout_centerInParent="true"
+                       android:src="@drawable/ic_income"/>
+
+                   <androidx.appcompat.widget.AppCompatTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_below="@id/ivWeeklyIncome"
+                       android:textColor="@color/color_accent_light"
+                       android:textStyle="bold"
+                       android:text="Weekly Income"
+                       android:layout_centerHorizontal="true"
+                       android:layout_marginTop="@dimen/margin_medium_2"
+                       android:layout_marginBottom="@dimen/margin_medium_2"/>
+
+               </RelativeLayout>
+
+           </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_medium_2"
+                android:orientation="horizontal"
+                android:layout_below="@id/llDailyAndWeeklyInCome"
+                android:id="@+id/llMonthlyIncomeAndAddItems"
+                >
+
+
+                <RelativeLayout
+                    android:id="@+id/btnMonthlyIncome"
+                    android:elevation="@dimen/margin_medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/admin_items_bg"
+                    android:layout_weight=".40"
+                    >
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="60dp"
+                        android:id="@+id/ivMonthlyIncome"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:layout_marginEnd="@dimen/margin_medium_2"
+                        android:layout_height="60dp"
+                        android:layout_marginBottom="@dimen/margin_medium_3"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_income"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivMonthlyIncome"
+                        android:textColor="@color/color_accent_light"
+                        android:textStyle="bold"
+                        android:text="Monthly Income"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:layout_marginBottom="@dimen/margin_medium_2"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:id="@+id/btnAddItems"
+                    android:layout_width="0dp"
+                    android:elevation="@dimen/margin_medium"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/admin_items_bg"
+                    android:layout_weight=".40"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivAddItems"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:layout_marginEnd="@dimen/margin_medium_2"
+                        android:layout_marginBottom="@dimen/margin_medium_3"
+                        android:src="@drawable/ic_add_items" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivAddItems"
+                        android:textColor="@color/color_accent_light"
+                        android:textStyle="bold"
+                        android:text="Add Items"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:layout_marginBottom="@dimen/margin_medium_2"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_medium_2"
+                android:orientation="horizontal"
+                android:layout_below="@id/llMonthlyIncomeAndAddItems"
+                android:id="@+id/llSettingAndAbout"
+                >
+
+
+                <RelativeLayout
+                    android:id="@+id/btnSetting"
+                    android:elevation="@dimen/margin_medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/admin_items_bg"
+                    android:layout_weight=".40"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivSetting"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:layout_marginEnd="@dimen/margin_medium_2"
+                        android:layout_marginBottom="@dimen/margin_medium_3"
+                        android:src="@drawable/ic_settings" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivSetting"
+                        android:textColor="@color/color_accent_light"
+                        android:textStyle="bold"
+                        android:text="Settings"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:layout_marginBottom="@dimen/margin_medium_2"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:id="@+id/btnHowToUse"
+                    android:layout_width="0dp"
+                    android:elevation="@dimen/margin_medium"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/admin_items_bg"
+                    android:layout_weight=".40"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivHowToUse"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:layout_marginEnd="@dimen/margin_medium_2"
+                        android:layout_marginBottom="@dimen/margin_medium_3"
+                        android:src="@drawable/ic_how_to_use" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivHowToUse"
+                        android:textColor="@color/color_accent_light"
+                        android:textStyle="bold"
+                        android:text="How To Use"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:layout_marginBottom="@dimen/margin_medium_2"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+   
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
