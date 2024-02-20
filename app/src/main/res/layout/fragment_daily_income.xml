@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.DailyIncomeFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etDatePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:hint="12/3/2023"
+            android:textColorHint="@color/color_accent_light" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSearchDate"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:layout_alignTop="@id/etDatePicker"
+            android:layout_alignBottom="@+id/etDatePicker"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginEnd="@dimen/margin_medium"
+
+
+            android:layout_toStartOf="@id/etDatePicker"
+            android:src="@drawable/ic_search_date" />
+
+        <RelativeLayout
+            android:id="@+id/rlDailyIncomeDashBoard"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/ivSearchDate"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:background="@drawable/dashboard_bg">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDailyIncomeTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/margin_xxxlarge"
+                android:text="280000"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_heading_2x"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDailyIncomeKyat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/margin_xxxlarge"
+                android:layout_marginEnd="@dimen/margin_xxxlarge"
+                android:text="Kyat"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_regular_3x" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDailyIncomeAllItems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlDailyIncomeDashBoard"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:text="All Items"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDailyIncomeShowAllItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDailyIncomeAllItems"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/margin_medium_2"
+
+            />
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
