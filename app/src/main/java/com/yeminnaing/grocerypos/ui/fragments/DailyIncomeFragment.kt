@@ -27,7 +27,7 @@ class DailyIncomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        (activity as AppCompatActivity).supportActionBar?.title = "CheckOut"
+        (activity as AppCompatActivity).supportActionBar?.title = "DailyIncome"
         setUpRecyclerView()
     }
 

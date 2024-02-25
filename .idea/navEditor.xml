@@ -13,8 +13,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="513" />
-                            <option name="y" value="7" />
+                            <option name="x" value="-2" />
+                            <option name="y" value="874" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -38,6 +38,15 @@
                             <option name="y" value="-395" />
                           </Point>
                         </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_dailyIncomeFragment_to_nav_admin">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>
@@ -50,6 +59,15 @@
                             <option name="y" value="-379" />
                           </Point>
                         </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_nav_admin_to_dailyIncomeFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>
@@ -58,8 +76,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="256" />
-                            <option name="y" value="12" />
+                            <option name="x" value="-343" />
+                            <option name="y" value="878" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -70,6 +88,18 @@
                               </value>
                             </entry>
                           </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="weeklyIncomeFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="436" />
+                            <option name="y" value="9" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>
