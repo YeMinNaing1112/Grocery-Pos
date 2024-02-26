@@ -50,6 +50,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="monthlyIncomeFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="477" />
+                            <option name="y" value="-797" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="nav_admin">
                     <value>
                       <LayoutPositions>
@@ -62,6 +74,11 @@
                         <option name="myPositions">
                           <map>
                             <entry key="action_nav_admin_to_dailyIncomeFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_nav_admin_to_weeklyIncomeFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -100,6 +117,15 @@
                             <option name="x" value="436" />
                             <option name="y" value="9" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_weeklyIncomeFragment_to_nav_admin">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>

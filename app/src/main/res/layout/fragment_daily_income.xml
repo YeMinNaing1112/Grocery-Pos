@@ -11,20 +11,25 @@
         android:layout_height="match_parent">
 
 
-        <androidx.appcompat.widget.AppCompatEditText
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/etDatePicker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:layout_marginEnd="@dimen/margin_medium_2"
-            android:hint="12/3/2023"
-            android:textColorHint="@color/color_accent_light" />
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/date_range_bg"
+            android:padding="@dimen/margin_medium_2"
+            android:text="12/3/2023 "
+            android:textColor="@color/color_accent_light"
+            android:textSize="@dimen/text_regular"
+            android:textStyle="bold" />
+
 
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivSearchDate"
-            android:layout_width="30dp"
-            android:layout_height="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignTop="@id/etDatePicker"
             android:layout_alignBottom="@+id/etDatePicker"
             android:layout_marginStart="@dimen/margin_medium_2"

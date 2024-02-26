@@ -8,11 +8,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.yeminnaing.grocerypos.adapters.ShowItemsDailyIncomeAdapter
+import com.yeminnaing.grocerypos.adapters.ShowItemsWeeklyIncomeAdapter
 import com.yeminnaing.grocerypos.databinding.FragmentWeeklyIncomeBinding
 
 class WeeklyIncomeFragment : Fragment() {
     private lateinit var binding: FragmentWeeklyIncomeBinding
-    private lateinit var adapter:ShowItemsDailyIncomeAdapter
+    private lateinit var adapter:ShowItemsWeeklyIncomeAdapter
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,7 +31,7 @@ class WeeklyIncomeFragment : Fragment() {
     }
 
     private fun setUpRecyclerView() {
-        adapter= ShowItemsDailyIncomeAdapter()
+        adapter= ShowItemsWeeklyIncomeAdapter()
         binding.rvWeeklyIncomeShowAllItems.also {
             it.adapter=adapter
             it.layoutManager=LinearLayoutManager(context)

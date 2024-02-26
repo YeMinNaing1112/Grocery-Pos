@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
                     }
 
                     else -> {
-                        Toast.makeText(this, "About", Toast.LENGTH_SHORT).show()
+                  
                     }
                 }
             }

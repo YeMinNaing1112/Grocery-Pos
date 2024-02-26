@@ -18,7 +18,7 @@
             android:padding="@dimen/margin_medium_2"
             android:text="12/3/2023 - 17/3/2023"
             android:textColor="@color/color_accent_light"
-            android:textSize="@dimen/text_regular_3x"
+            android:textSize="@dimen/text_regular"
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -41,7 +41,7 @@
             android:background="@drawable/dashboard_bg">
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvDailyIncomeTotal"
+                android:id="@+id/tvWeeklyIncomeTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -52,7 +52,7 @@
                 android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvDailyIncomeKyat"
+                android:id="@+id/tvWeeklyncomeKyat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
