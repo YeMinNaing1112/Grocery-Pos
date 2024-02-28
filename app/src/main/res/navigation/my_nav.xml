@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_nav_admin_to_monthlyIncomeFragment"
             app:destination="@id/monthlyIncomeFragment" />
+        <action
+            android:id="@+id/action_nav_admin_to_addItemsFragment"
+            app:destination="@id/addItemsFragment" />
     </fragment>
     <fragment
         android:id="@+id/nav_cashier"
@@ -63,6 +66,15 @@
         tools:layout="@layout/fragment_montly_income" >
         <action
             android:id="@+id/action_monthlyIncomeFragment_to_nav_admin"
+            app:destination="@id/nav_admin" />
+    </fragment>
+    <fragment
+        android:id="@+id/addItemsFragment"
+        android:name="com.yeminnaing.grocerypos.ui.fragments.AddItemsFragment"
+        android:label="fragment_add_items"
+        tools:layout="@layout/fragment_add_items" >
+        <action
+            android:id="@+id/action_addItemsFragment_to_nav_admin"
             app:destination="@id/nav_admin" />
     </fragment>
 </navigation>

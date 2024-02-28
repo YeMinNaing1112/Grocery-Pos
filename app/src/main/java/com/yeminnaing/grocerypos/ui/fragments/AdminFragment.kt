@@ -40,6 +40,11 @@ class AdminFragment : Fragment() {
             Navigation.findNavController(view)
                 .navigate(R.id.action_nav_admin_to_monthlyIncomeFragment)
         }
+
+        binding.btnAddItems.setOnClickListener {
+            Navigation.findNavController(view)
+                .navigate(R.id.action_nav_admin_to_addItemsFragment)
+        }
     }
 
 }

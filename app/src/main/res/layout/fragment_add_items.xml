@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.AddItemsFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:text="Category"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutCategory"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvCategory"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:hint="Category"
+                app:boxStrokeColor="@color/text_color_dark"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/text_color_dark">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTvCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textInputLayoutCategory"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:text="ItemName"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutItemName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvItemName"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:hint="ItemName"
+                app:boxStrokeColor="@color/text_color_dark"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/text_color_dark">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTvItemName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/llPriceAndQty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textInputLayoutItemName"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2">
+
+                <RelativeLayout
+                    android:id="@+id/rlPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".40">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price"
+                        android:textSize="@dimen/text_regular_2x"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/textInputLayoutPrice"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvPrice"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginEnd="@dimen/margin_medium_2"
+                        android:hint="Price"
+                        app:boxStrokeColor="@color/text_color_dark"
+                        app:hintAnimationEnabled="true"
+                        app:hintTextColor="@color/text_color_dark">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/autoCompleteTvPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlQty"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".40">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvQty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quantity"
+                        android:textSize="@dimen/text_regular_2x"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/textInputLayoutQty"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvQty"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:hint="Quantity"
+                        app:boxStrokeColor="@color/text_color_dark"
+                        app:hintAnimationEnabled="true"
+                        app:hintTextColor="@color/text_color_dark">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/autoCompleteTvQty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llPriceAndQty"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:background="@drawable/proceed_to_order_bg"
+                android:text="Add"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/btnAdd"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:background="@color/black" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvShowStock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnAdd"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:text="Stocks"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvShowStock"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:clipToPadding="false"
+                android:paddingEnd="@dimen/margin_medium_2" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvShowStock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rvCategory"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:clipToPadding="false"
+                android:paddingEnd="@dimen/margin_medium_2" />
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
